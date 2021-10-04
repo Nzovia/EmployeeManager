@@ -13,14 +13,23 @@
     <title>Add new employees</title>
 </head>
 <body>
+<div class="container h-100">
 <h2>Add new Employee</h2>
 <hr/>
-<div class="container">
-    <form th:action="@{addEmployee}" th:object="${employees}", method="post">
-        <input type="text" th:field="*{fname}" placeholder="first name" class="form control col-4 mb-4" />
-        <input type="text" th:field="*{sname}" placeholder="second name" class="form control col-4 mb-4" />
-        <input type="text" th:field="*{phone}" placeholder="user phone" class="form control col-4 mb-4" />
-        <input type="text" th:field="*{email}" placeholder="user email" class="form control col-4 mb-4" />
+
+    <form th:action="@{addEmployee}" th:object="${employees}"  method="post">
+        <input type="text" th:field="*{fname}" placeholder="first name"
+               class="form control col-4 mb-4" required minlength="4"
+               maxlength="20" />
+        <input type="text" th:field="*{sname}" placeholder="second name"
+               class="form control col-4 mb-4" required minlength="4"
+               maxlength="20" />
+        <input type="text" th:field="*{phone}" placeholder="user phone" class="form control col-4 mb-4"
+               required minlength="4"
+               maxlength="20"/>
+        <input type="email" th:field="*{email}" placeholder="user email" class="form control col-4 mb-4"
+               required minlength="4"
+               maxlength="20"/>
         <button class="btn btn-primary " type="submit">save</button>
 
     </form>

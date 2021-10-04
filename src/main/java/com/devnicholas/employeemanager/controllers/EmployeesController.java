@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -30,5 +31,12 @@ public class EmployeesController {
     public String addEmployees(@ModelAttribute Employees employees){
         employeeRepo.save(employees);
         return "redirect:/list";
+    }
+    @GetMapping("/showUpdateDetais")
+    public  ModelAndView showUpdate(@RequestParam Long employeeId){
+        ModelAndView mov = new ModelAndView();
+        Employees employees = employeeRepo.findById(employeeId).get();
+        mov.addObject("employee", employees);
+        return mov;
     }
 }

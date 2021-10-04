@@ -26,6 +26,7 @@
     <th>second name</th>
     <th>phone</th>
     <th>email</th>
+    <th>actions</th>
     </tr>
     </thead>
 
@@ -36,6 +37,12 @@
         <td th:text="${employee.sname}"></td>
         <td th:text="${employee.phone}"></td>
         <td th:text="${employee.email}"></td>
+        <td>
+        <a th:href="@{showUpdateDetais (employeeid=${employee.id})}" class="btn btn-info">
+         Update</a>
+
+
+        </td>
     </tr>
     </tbody>
     </table>
