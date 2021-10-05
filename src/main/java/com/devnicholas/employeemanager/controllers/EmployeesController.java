@@ -32,11 +32,16 @@ public class EmployeesController {
         employeeRepo.save(employees);
         return "redirect:/list";
     }
-    @GetMapping("/showUpdateDetais")
-    public  ModelAndView showUpdate(@RequestParam Long employeeId){
-        ModelAndView mov = new ModelAndView();
-        Employees employees = employeeRepo.findById(employeeId).get();
-        mov.addObject("employee", employees);
+    @GetMapping("/showUpdate")
+    public ModelAndView showUpdate(@RequestParam Long employeeId){
+        ModelAndView mov = new ModelAndView("add_employees");
+        Employees employeesU = employeeRepo.findById(employeeId).get();
+        mov.addObject("employees", employeesU);
         return mov;
+    }
+    @GetMapping("/showDeleteEmployee")
+    public String showDeleteEmployee(@RequestParam Long employeeId){
+    employeeRepo.deleteById(employeeId);
+    return "redirect:/list";
     }
 }

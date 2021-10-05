@@ -38,9 +38,10 @@
         <td th:text="${employee.phone}"></td>
         <td th:text="${employee.email}"></td>
         <td>
-        <a th:href="@{showUpdateDetais (employeeid=${employee.id})}" class="btn btn-info">
+        <a th:href="@{showUpdate (employeeId=${employee.id})}" class="btn btn-info ">
          Update</a>
-
+            <a th:href="@{showDeleteEmployee (employeeId=${employee.id})}" class="btn btn-danger ml-2">
+                Delete</a>
 
         </td>
     </tr>

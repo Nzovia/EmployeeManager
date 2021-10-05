@@ -31,6 +31,10 @@
                required minlength="4"
                maxlength="20"/>
         <button class="btn btn-primary " type="submit">save</button>
+        <!--you notice that when we are updating an element from the database multiple copies are built there
+        instead use the following field to enhance our operation-->
+        <input type="hidden" th:field="*{id}">
+
 
     </form>
     <hr/>
