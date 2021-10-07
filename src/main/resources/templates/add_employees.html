@@ -16,24 +16,34 @@
     <title>Add new employees</title>
 </head>
 <body>
-<div class="container h-100">
+<div class="container width: 500px;">
 <h2>Add new Employee</h2>
 <hr/>
 
     <form th:action="@{addEmployee}" th:object="${employees}"  method="post">
+        <div class="col-8">
         <input type="text" th:field="*{fname}" placeholder="first name"
                class="form control col-4 mb-4" required minlength="4"
                maxlength="20" />
+        </div>
+        <div class="col-8">
         <input type="text" th:field="*{sname}" placeholder="second name"
                class="form control col-4 mb-4" required minlength="4"
                maxlength="20" />
+        </div>
+        <div class="col-8">
         <input type="text" th:field="*{phone}" placeholder="user phone" class="form control col-4 mb-4"
                required minlength="4"
                maxlength="20"/>
+        </div>
+        <div class="col-8">
         <input type="email" th:field="*{email}" placeholder="user email" class="form control col-4 mb-4"
                required minlength="4"
                maxlength="20"/>
+        </div>
+        <div>
         <button class="btn btn-primary " type="submit">save</button>
+        </div>
         <!--you notice that when we are updating an element from the database multiple copies are built there
         instead use the following field to enhance our operation-->
         <input type="hidden" th:field="*{id}">

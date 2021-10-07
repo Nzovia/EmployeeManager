@@ -55,7 +55,15 @@
 <script>
     $(document).ready(function () {
     //    add the Id selector here to target the table
-        $("#employeeTable").DataTable();
+        $("#employeeTable").DataTable({
+
+            'aoColumnDefs ': [{
+                'bSortable': false,
+                'sTargets':  [-1]
+            }]
+            }
+        );
+
     })
 </script>
 </body>

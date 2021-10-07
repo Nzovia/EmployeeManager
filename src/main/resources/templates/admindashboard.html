@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns: th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>admin</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+<div class="side-menu">
+    <div class="brand-name">
+        <h2>Tracom Service Limited</h2>
+    </div>
+    <ul>
+        <li><img src="../static/images/dashboard.png" alt="" th:href="@{/addEmployee}">&nbsp;<span>Dashboard </span> </li>
+        <li><img src="../static/images/Actions-user-properties-icon.png" alt="">&nbsp; <span>Employees</span></li>
+        <li><img src="../static/images/meetings.png" alt="">&nbsp;<span>Meetings</span> </li>
+        <li><img src="../static/images/boardroom icon.png" alt="">&nbsp; <span>Board Rooms</span></li>
+        <li><img src="../static/images/communication.png" alt="">&nbsp; <span>Communication</span></li>
+        <li><img src="../static/images/Calendar.png" alt="">&nbsp; <span>Calendar</span></li>
+        <li><img src="../static/images/notification.png" alt="">&nbsp; <span>Notifications</span></li>
+        <li><img src="../static/images/help-web-button.png" alt="">&nbsp; <span>LogOut</span></li>
+
+    </ul>
+</div>
+<div class="container">
+    <div class="header">
+        <div class="nav">
+            <div class="search">
+                <input type="text" placeholder="search here.....">
+                <button type="submit"><img src="../static/images/magnifier.png" alt=""> </button>
+            </div>
+            <div class="user">
+                <a href="#" class="btn">Add Employee</a>
+                <img src="../static/images/notification-bell.png" alt="">
+                <div class="img-case">
+                    <img src="../static/images/user.png" alt="">
+                </div>
+            </div>
+            <!-- <div class="user"></div> -->
+        </div>
+    </div>
+    <div class="content">
+        <div class="cards">
+            <div class="card">
+                <div class="box">
+                    <h1>110</h1>
+                    <h3>Employees</h3>
+                </div>
+                <div class="icon-case">
+                    <img src="../static/images/userscard.png" alt="">
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <h1>50</h1>
+                    <h3>Meetings</h3>
+                </div>
+                <div class="icon-case">
+                    <img src="../static/images/meetingcard.png" alt="">
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <h1>2</h1>
+                    <h3>Rooms</h3>
+                </div>
+                <div class="icon-case">
+                    <img src="../static/images/boardroom.png" alt="">
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <h1>10</h1>
+                    <h3>Resources</h3>
+                </div>
+                <div class="icon-case">
+                    <img src="../static/images/resourcescard.png" alt="">
+
+                </div>
+            </div>
+        </div>
+        <div class="content-2">
+            <div class="meeting-queue">
+                <div class="title">
+                    <h3>Events in Waiting</h3>
+                    <a href="#" class="btn">View All</a>
+                </div>
+                <table>
+                    <tr>
+                        <th>Id</th>
+                        <th>title</th>
+                        <th>count</th>
+                        <th>Start</th>
+                        <th>end</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Induction of Interns</td>
+                        <td>60</td>
+                        <td>11:00AM</td>
+                        <td>1:30PM</td>
+                        <td><a href="#" class="btn">see</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="new-employee">
+                <div class="title">
+                    <h3>New Employees</h3>
+                    <a href="#" class="btn">All</a>
+                </div>
+                <table>
+                    <tr>
+                        <th>profile</th>
+                        <th>name</th>
+                        <th>Email</th>
+                        <th>message</th>
+                    </tr>
+                    <tr>
+                        <td><img src="../static/images/user.png" alt=""></td>
+                        <td>Nicholas Maundu</td>
+                        <td>nichonzovia@gmail.com</td>
+                        <td><a href="#" class="btn">View</a></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
