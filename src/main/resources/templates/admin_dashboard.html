@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns: th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>admin</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link  th:href = "@{/css/style.css}" rel="stylesheet">
 </head>
 
 <body>
@@ -14,14 +14,14 @@
         <h2>Tracom Service Limited</h2>
     </div>
     <ul>
-        <li><img src="../static/images/dashboard.png" alt="" th:href="@{/addEmployee}">&nbsp;<span>Dashboard </span> </li>
-        <li><img src="../static/images/Actions-user-properties-icon.png" alt="">&nbsp; <span>Employees</span></li>
-        <li><img src="../static/images/meetings.png" alt="">&nbsp;<span>Meetings</span> </li>
-        <li><img src="../static/images/boardroom icon.png" alt="">&nbsp; <span>Board Rooms</span></li>
-        <li><img src="../static/images/communication.png" alt="">&nbsp; <span>Communication</span></li>
-        <li><img src="../static/images/Calendar.png" alt="">&nbsp; <span>Calendar</span></li>
-        <li><img src="../static/images/notification.png" alt="">&nbsp; <span>Notifications</span></li>
-        <li><img src="../static/images/help-web-button.png" alt="">&nbsp; <span>LogOut</span></li>
+        <li><img th:src ="@{/images/dashboard.png}">&nbsp;<span>Dashboard </span>  </li>
+        <li><img th:src="@{/images/Actions-user-properties-icon.png}">&nbsp; <span>Employees</span></li>
+        <li><img th:src="@{/images/meetings.png}">&nbsp;<span>Meetings</span> </li>
+        <li><img th:src="@{/images/boardroom icon.png}" alt="">&nbsp; <span>Board Rooms</span></li>
+        <li><img th:src="@{/images/communication.png}" alt="">&nbsp; <span>Communication</span></li>
+        <li><img th:src="@{/images/Calendar.png}" alt="">&nbsp; <span>Calendar</span></li>
+        <li><img th:src="@{/images/notification.png}" alt="">&nbsp; <span>Notifications</span></li>
+        <li><img th:src="@{/images/help-web-button.png } " alt="">&nbsp; <span>LogOut</span></li>
 
     </ul>
 </div>
@@ -30,13 +30,13 @@
         <div class="nav">
             <div class="search">
                 <input type="text" placeholder="search here.....">
-                <button type="submit"><img src="../static/images/magnifier.png" alt=""> </button>
+                <button type="submit"><img th:src="@{/images/magnifier.png}" alt=""> </button>
             </div>
             <div class="user">
-                <a href="#" class="btn">Add Employee</a>
-                <img src="../static/images/notification-bell.png" alt="">
+                <a th:href="@{addEmployee}" class="btn">Add Employee</a>
+                <img th:src="@{/images/notification-bell.png}" alt="">
                 <div class="img-case">
-                    <img src="../static/images/user.png" alt="">
+                    <img th:src="@{/images/user.png}" alt="">
                 </div>
             </div>
             <!-- <div class="user"></div> -->
@@ -50,7 +50,7 @@
                     <h3>Employees</h3>
                 </div>
                 <div class="icon-case">
-                    <img src="../static/images/userscard.png" alt="">
+                    <img th:src="@{/images/userscard.png}" alt="">
 
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <h3>Meetings</h3>
                 </div>
                 <div class="icon-case">
-                    <img src="../static/images/meetingcard.png" alt="">
+                    <img th:src="@{/images/meetingcard.png}" alt="">
 
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     <h3>Rooms</h3>
                 </div>
                 <div class="icon-case">
-                    <img src="../static/images/boardroom.png" alt="">
+                    <img th:src="@{/images/boardroom.png}" alt="">
 
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     <h3>Resources</h3>
                 </div>
                 <div class="icon-case">
-                    <img src="../static/images/resourcescard.png" alt="">
+                    <img th:src="@{/images/resourcescard.png}" alt="">
 
                 </div>
             </div>
@@ -123,7 +123,7 @@
                         <th>message</th>
                     </tr>
                     <tr>
-                        <td><img src="../static/images/user.png" alt=""></td>
+                        <td><img th:src="@{/images/user.png}" alt=""></td>
                         <td>Nicholas Maundu</td>
                         <td>nichonzovia@gmail.com</td>
                         <td><a href="#" class="btn">View</a></td>

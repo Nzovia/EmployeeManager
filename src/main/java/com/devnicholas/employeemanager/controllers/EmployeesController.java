@@ -15,11 +15,15 @@ public class EmployeesController {
     @Autowired
     private EmployeeRepository employeeRepo;
 
-    @GetMapping({"/**"})
+    @GetMapping({"/"})
         public String viewHomePage(){
-            return "admindashboard";
+            return "/getting_started";
 
         }
+    @GetMapping("/start_Activities")
+    public String startActivities(){
+        return "/admin_dashboard";
+    }
 
 
     @GetMapping({"/showEmployees","/list"})
